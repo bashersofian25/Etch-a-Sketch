@@ -20,9 +20,9 @@ body {
     border-color: black;
     justify-content: center;
     align-items: center;
-    width: 600px;
-    height: 600px;
-    flex: 0 0 600px;
+    width: 500px;
+    height: 500px;
+    flex: 0 0 500px;
     background-color: white;
 }
 
@@ -50,7 +50,7 @@ button {
 .row {
     display: flex;
     justify-content: stretch;
-    width: 600px;
+    width: 500px;
     flex: auto;
 }
 
