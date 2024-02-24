@@ -25,9 +25,7 @@ body {
     flex: 0 0 600px;
     background-color: white;
 }
-.black {
-    background-color: black;
-}
+
 #buttons {
     display: flex;
     justify-content: center;
@@ -41,10 +39,9 @@ button {
     padding: 15px;
     background-color: wheat;
     color: black;
-    border-color: black;
+    border-color: rgb(0, 0, 0);
     border-style: dashed
 }
-
 #inputs {
     display: flex;
     flex-direction: column;
@@ -61,6 +58,7 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 20px;
 }
 
 .cell {
