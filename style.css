@@ -5,8 +5,13 @@ body {
     align-items: center;
     text-align: center;
     gap: 30px;
-    background-color: rgb(131, 124, 124);
+    background-color: rgb(249, 241, 225);
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+  
 #container {
     display: flex;
     flex-direction: column;
@@ -20,19 +25,26 @@ body {
     flex: 0 0 600px;
     background-color: white;
 }
+.black {
+    background-color: black;
+}
 #buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    box-shadow: none;
+    
 }
 button {
     border-radius: 5px;
     padding: 15px;
-    background-color: teal;
-    color: wheat;
-    border-color: teal;
+    background-color: wheat;
+    color: black;
+    border-color: black;
+    border-style: dashed
 }
+
 #inputs {
     display: flex;
     flex-direction: column;
@@ -45,9 +57,13 @@ button {
     flex: auto;
 }
 
+#color {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .cell {
-    flex: 1;
-    justify-content: stretch;
     border-width: 1px;
     flex: auto;
 } 

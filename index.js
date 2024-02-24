@@ -1,7 +1,9 @@
 const grid = document.getElementById('container');
 let rows = [];
-let cell;
+
 const resize = document.getElementById('resize');
+const reset = document.getElementById('reset');
+let cells = [];
 
 const cleanGrid = ()=>{
     const rows = document.querySelectorAll('.row');
@@ -9,9 +11,30 @@ const cleanGrid = ()=>{
         element.remove();
     });
 }
-const makeGrid = ()=> {
+const askForUserInput = () => {
+
+    const input = Number(prompt("Please Enter a Number 1-100"));
+    if (input > 100){
+        return 100
+    }else if (input < 1) {
+        return 0;
+    }else {
+        return input;
+    }
+}
+const resizeGrid = () => {
+    const input = askForUserInput();
+    makeGrid(input);
+    cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+        cell.addEventListener('mouseover', e => {
+            changeCellColor(e);
+        });
+    });
+}
+const makeGrid = (dimension) => {
+    let cell;
     cleanGrid();
-    const dimension = Number(prompt("Please Enter a Number 1-100"));
 
     for (let i = 0; i< dimension; i++){
         rows[i] = document.createElement('div');
@@ -19,12 +42,28 @@ const makeGrid = ()=> {
         for(let j = 0; j<dimension; j++){
             cell = document.createElement('div');
             cell.classList.add('cell');
-            cell.setAttribute('width', `${500/dimension}px`);
-            cell.setAttribute('height', `${500/dimension}px`)
             rows[i].append(cell);
         }
         grid.append(rows[i]);
     }
 }
+const resetGrid = () => {
+    cleanGrid();
+    makeGrid(10);
+    cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+        cell.addEventListener('mouseover', e => {
+            changeCellColor(e);
+        });
+    });
+}
 
-resize.addEventListener('click', makeGrid);
+const changeCellColor = (e) => {
+    e.target.classList.add('black');
+}
+
+resetGrid();
+
+
+resize.addEventListener('click', resizeGrid);
+reset.addEventListener('click', resetGrid);
