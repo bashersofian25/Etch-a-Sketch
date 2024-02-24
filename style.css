@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    background-color: rgb(131, 124, 124);
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    flex: 0 0 600px;
+    background-color: white;
+}
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+button {
+    border-radius: 5px;
+    padding: 15px;
+    background-color: teal;
+    color: wheat;
+    border-color: teal;
+}
+#inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.row {
+    display: flex;
+    justify-content: stretch;
+    width: 600px;
+    flex: auto;
+}
+
+.cell {
+    flex: 1;
+    justify-content: stretch;
+    border-width: 1px;
+    flex: auto;
+} 
